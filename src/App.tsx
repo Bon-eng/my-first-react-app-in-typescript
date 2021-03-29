@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from './Counter';
 
 interface AppProps {
   message?: string;
@@ -6,7 +7,11 @@ interface AppProps {
 
 //Componentにはデフォルト値がある
 const App: React.FunctionComponent<AppProps> = ({ message }) => {
-  return <div>{message}</div>;
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
 App.defaultProps = {
